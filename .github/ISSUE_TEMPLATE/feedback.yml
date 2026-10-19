@@ -1,0 +1,38 @@
+name: Feedback or bug
+description: Tell us what worked, what didn't, or what you'd like to see.
+labels: [feedback]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback?
+      options:
+        - Something didn't work (bug)
+        - Idea or request
+        - General feedback
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead. Screenshots help, but please hide your child's full name and any API key.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: StudyQuest version
+      description: StudyQuest menu → About StudyQuest.
+      placeholder: "0.2.2"
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac
+      description: Apple menu → About This Mac.
+      placeholder: "macOS 15.3, MacBook Air M2"
+  - type: input
+    id: age
+    attributes:
+      label: Child's grade or age (optional)
+      placeholder: "4th grade"
